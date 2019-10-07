@@ -5,10 +5,13 @@ export default Factory.extend({
         return 'jaisingh@zohomail.com'
     },
     username(i){
-        return 'Jaisingh'+i
+        return '1'
     },
     password(){
         return '123'
+    },
+    usertype(){
+        return true
     }
 
 });

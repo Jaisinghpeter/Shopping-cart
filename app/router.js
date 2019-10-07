@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('about-us');
   this.route('register');
   this.route('product');
+  this.route('productdetails',{path:"/productdetails/:id"});
+  this.route('newcomponent');
 });
 
 export default Router;

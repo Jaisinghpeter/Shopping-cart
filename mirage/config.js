@@ -16,9 +16,12 @@ export default function() {
     this.get('/users');
     this.get('/products');
     this.post('/users');
+    this.post('/products');
     this.get('/users/:id');
+    this.get('/products/:id');
     this.put('/posts/:id'); // or this.patch
     this.del('/posts/:id');
+    this.del('/products/:id');
 
     
 }

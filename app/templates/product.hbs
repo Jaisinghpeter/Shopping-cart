@@ -1,10 +1,38 @@
 {{outlet}}
 <div class="container">
     <div class="row">
-        <div class="col-sm-4">
+            <div id={{product.id}} class="col-sm-4">
+                <div class="card">
+                    {{#link-to "newcomponent"}}
+                    Add New
+                    {{/link-to}}
+                </div>
+            </div>
+                
+            
             {{#each model as |product|}}
-                {{product.name}}
+            <div id={{product.id}} class="col-sm-4">
+                <div class="card">
+                    <centre><img src={{product.image}} alt="Iimage" style="width:200px"></centre>
+                     {{#link-to "productdetails" product.id}}
+                    <label onMouseOver="this.style.color='#0F0'"  onMouseOut="this.style.color='#000'"for ={{product.id}}><h1>{{product.name}}</h1></label>
+                    {{/link-to}}
+                    <p class="price">{{product.price}} Rs</p>
+                    <p>{{product.description}}</p>
+                    {{!-- <button type="submit" class="btn btn-primary" {{action "editProduct" product}}>Edit</button> --}}
+                    <button type="submit" class="btn btn-primary" {{action "deleteProduct" product }}>Delete</button>
+                </div>
+            </div>
+            {{!-- <div>
+                {{#link-to "productdetails" product.id}}
+                {{product.name}} 
+                {{/link-to}}
+            </div> --}}
+            
+            <br><br>
             {{/each}}
-        </div>
+            <div>
+            
+            </div>
     </div>
 </div>

@@ -5,5 +5,5 @@ export default Model.extend({
   email: attr('string'),
   username: attr('string'),
   password: attr('string'),
-  usertype:attr('string')
+  usertype:attr('boolean')
 });

@@ -2,7 +2,7 @@
 <div class="container">
     <div id="login" class="row">
         <div class="col-sm-4"></div>
-        <form {{action "createUser"}}>
+        <form>
             <div class="form-group">
                 <label for="userName">E-Mail Addres:</label>
                 {{input type="email" value=emailAddress class="form-control" id="emailAddress"}}
@@ -15,10 +15,14 @@
                 <label for="password">Password:</label>
                 {{input type="password" value=password class="form-control" id="password"}}
             </div>
+            <div class="form-group">
+                <label for="password1">Password:</label>
+                {{input type="checkbox" checked=cbState}}
+            </div>
             <div>
                 <LinkTo @route="index" >Back to Login</LinkTo><br><br>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary" {{action "createUser"}}>Register</button>
         </form>
     </div>
 </div>
