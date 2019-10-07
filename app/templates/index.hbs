@@ -2,7 +2,7 @@
 <div class="container">
     <div id="login" class="row">
         <div class="col-sm-4"></div>
-        <form {{action "checklogin"}}>
+        <form >
             <div class="form-group">
                 <label for="userName">User Name:</label>
                 {{input type="text" value=userName class="form-control" id="userName"}}
@@ -14,7 +14,11 @@
             <div>
                 <LinkTo @route="register" >No Account Click to Register</LinkTo><br><br>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" {{action "checklogin"}} class="btn btn-primary">Submit</button>
         </form>
     </div>
 </div>
+{{#each model as |user|}}
+{{user.email}}
+{{/each}}
+
